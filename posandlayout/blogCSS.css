@@ -1,0 +1,143 @@
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+:root{
+  --jump-width: 15%;
+  --header-height: 140px; 
+  --article-width: 300px;
+}
+
+#jumpMenu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100vh;
+  background: #31c9e4;
+  padding: 20px 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+#jumpMenu h2{
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.jumpLinks{
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jumpLinks a{
+  display: block;
+}
+
+#jumpMenu a{
+  display: block;
+  padding: 16px 0;
+  color: #0000ee;
+  text-decoration: underline;
+  font-family: Georgia, serif;
+}
+
+#topHeader{
+  position: fixed;
+  top: 0;
+  left: var(--jump-width);
+  width: calc(100% - var(--jump-width));
+  height: var(--header-height);
+  z-index: 1000;
+}
+
+.brandRow{
+  height: 100px;
+  background: rgb(220, 219, 230);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand{
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.topNav{
+  height: 70px;
+  background: #000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 0 30px;
+  gap: 30px;
+}
+
+.navBtn{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background: #838cce; 
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 1.25rem;
+  padding: 14px 18px;
+  min-width: 240px;
+  text-align: center;
+}
+
+#content{
+  margin-left: var(--jump-width);
+  padding-top: calc(var(--header-height) + 20px);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#content > h1{
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  margin: 20px 0 40px;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--article-width));
+  gap: 40px 50px;
+  justify-content: center;
+}
+
+article{
+  width: var(--article-width);
+  background: transparent;
+}
+
+article h2{
+  font-family: Arial, sans-serif;
+  margin: 0 0 10px;
+}
+
+#thanks{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background: #83c8ec;
+  border: 1px solid #333;
+  padding: 18px 24px;
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  margin: 0;
+  z-index: 1200;
+}
+
+footer{
+  margin-bottom: 30px;  
+}
